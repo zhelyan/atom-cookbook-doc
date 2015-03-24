@@ -1,0 +1,75 @@
+'.source.ruby':
+  'knife-cookbook-doc_resource':
+    'prefix': 'resdoc'
+    'body':  """
+=begin
+#<
+The ${1:"lwrp_name"} LWRP ${2:"short_description"}.
+
+${3:"long_description"}
+
+@action ${4:"action"} ${5:"action_description"}
+
+@section Examples
+
+    # An example of how to use ${1:"lwrp_name"} LWRP
+
+    ${1:"lwrp_name"} "${2:"short_description"}" do
+    \t${6:"param1"}  \t\t\t${7:"param1_val"}
+    \t${8:"param1"} \t\t\t${9:"param1_val"}
+    \t${10:"param1"} \t\t\t${11:"param1_val"}
+    \t${12:"param1"} \t\t\t${13:"param1_val"}
+    \taction :${4:"action"}
+    end
+#>
+=end
+"""
+
+  'knife-cookbook-doc_recipe':
+    'prefix': 'recdoc'
+    'body': """
+=begin
+#<
+This recipe ${1:"your_comment"}. It does thing 1, thing 2 and thing 3!
+#>
+=end
+"""
+
+  'knife-cookbook-doc_line_comment':
+    'prefix': 'ldoc'
+    'body': '#<> ${1:"your_comment"}'
+
+  'knife-cookbook-doc_definition':
+    'prefix': 'defdoc'
+    'body': """
+=begin
+#<
+The ${1:"definition"} definition ${2:"definition"}.
+
+@param ${3:"param"} ${4:"param_desc"}.
+@param ${5:"param"} ${6:"param_desc"}
+
+@section Examples
+
+    # An example of my awesome service
+    ${1:"definition"} "${7:"definition_name"}" do
+      ${3:"param"} \'${8:"param"}\'
+      ${5:"param"} \'${9:"param"}\'
+    end
+  #>
+=end
+"""
+
+  'knife-cookbook-doc_comment_block':
+    'prefix': 'cdoc'
+    'body': """
+=begin
+#<
+${1:"your_comment"}
+#>
+=end
+"""
+
+  'knife-cookbook-doc_attribute':
+    'prefix': 'atdoc'
+    'body': '#<> @attribute ${1:"attribute_name"} ${2:"description"}.'
